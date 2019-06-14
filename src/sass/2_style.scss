@@ -1,16 +1,3 @@
-// Fonts
-@font-face {
-    font-family: 'MyFont';
-    src: url('../fonts/myfont.eot');
-    src: url('../fonts/myfont.eot?#iefix') format('embedded-opentype'),
-      url('../fonts/myfont.woff') format('woff'),
-      url('../fonts/myfont.ttf') format('truetype'),
-      url('../fonts/myfont.svg#webfont') format('svg');
-}
-
-
-
-// Common
 *, *::before, *::after {
     box-sizing: inherit;
 }
@@ -25,15 +12,136 @@ body {
     padding: 0;
     height: 100%;
     background-color: #fff;
-    font-family: sans-serif;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;;
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
     -webkit-overflow-scrolling: touch;
-    /*word-break: break-all;*/
-    /*word-wrap: break-word;*/
 }
 .container {
-    max-width: 980px;
     margin: 0 auto;
-    padding: 0 10px;
+    max-width: 1170px;
+    width: 80%;
+}
+
+
+
+.header {
+    padding: 28px 0;
+    background-color: #0B273C;
+    color: #fff;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &-logo {
+        font-size: 27px;
+        font-weight: bold;
+    }
+
+    &-nav {
+        display: flex;
+        align-items: center;
+
+        .nav {
+
+            &-list {
+                display: flex;
+                align-items: center;
+            }
+
+            &-item {
+
+                &:not(:last-child) {
+                    margin-right: 30px;
+                }
+
+                &__link {
+                    font-size: 20px;
+
+                    &.active {
+                        position: relative;
+                        
+                        &:after {
+                            content: '';
+                            height: 2px;
+                            width: 70%;
+                            position: absolute;
+                            left: 50%;
+                            bottom: -2px;
+                            transform: translateX(-50%);
+                            background-color: #fff;
+                        }
+                    }
+
+                    &.btn {
+                        padding: 10px 20px;
+                        background-color: #3E86C9;
+                        color: #fff;
+                        font-size: 20px;
+                        border-radius: 55px;
+                    }
+                }
+            }
+        }
+
+        .langs {
+            margin-left: 50px;
+            font-size: 20px;
+        }
+    }
+}
+
+
+
+.info {
+
+    &-title {
+
+    }
+
+    .text {
+
+    }
+
+    .info-block {
+
+        .text {
+
+        }
+
+        .img {
+
+        }
+    }
+
+    &-stats {
+
+    }
+}
+
+
+
+.benefits {
+
+    .title {
+
+    }
+
+    .descr {
+
+    }
+
+    .link-more {
+
+    }
+
+    .list {
+
+        .item {
+            
+        }
+    }
 }
