@@ -11,7 +11,7 @@ body {
     margin: 0;
     padding: 0;
     height: 100%;
-    background-color: #fff;
+    background-color: #0B1E2C;
     color: #fff;
     font-family: 'Montserrat', sans-serif;;
     overflow-x: hidden;
@@ -28,68 +28,169 @@ body {
 
 .header {
     padding: 28px 0;
+    position: relative;
     background-color: #0B273C;
     color: #fff;
 
     .container {
         display: flex;
         justify-content: space-between;
-    }
-
-    &-logo {
-        font-size: 27px;
-        font-weight: bold;
-    }
-
-    &-nav {
-        display: flex;
         align-items: center;
 
-        .nav {
+        @media (max-width: 1000px) {
+            flex-direction: column;
+        }
+    }
 
-            &-list {
-                display: flex;
-                align-items: center;
+    &__logo {
+        font-size: 27px;
+        font-weight: bold;
+
+        @media (max-width: 1000px) {
+            margin-bottom: 30px;
+            align-self: center;
+        }
+    }
+
+    &__nav {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+
+        .menu {
+            display: flex;
+            align-items: center;
+
+            @media (max-width: 800px) {
+                display: none;
+                margin-top: 30px;
+                padding: 30px;
+                min-width: 400px;
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                transform: translateX(-50%);
+                background-color: #0B273C;
+                border-radius: 20px;
             }
 
-            &-item {
+            @media (max-width: 450px) {
+                min-width: 90%;
+            }
+
+            &.isVisible {
+                flex-direction: column;
+            }
+
+            &__item {
 
                 &:not(:last-child) {
                     margin-right: 30px;
+
+                    @media (max-width: 800px) {
+                        margin-right: 0;
+                        margin-bottom: 30px;
+                    }
                 }
 
-                &__link {
+                &--langs {
+                    margin-left: 20px;
+                    padding: 10px 20px;
+                    display: inline-block;
                     font-size: 20px;
+                    border: 2px solid #3E86C9;
+                    border-radius: 100px;
+                    cursor: pointer;
 
-                    &.active {
-                        position: relative;
-                        
-                        &:after {
-                            content: '';
-                            height: 2px;
-                            width: 70%;
-                            position: absolute;
-                            left: 50%;
-                            bottom: -2px;
-                            transform: translateX(-50%);
-                            background-color: #fff;
-                        }
-                    }
-
-                    &.btn {
-                        padding: 10px 20px;
-                        background-color: #3E86C9;
-                        color: #fff;
-                        font-size: 20px;
-                        border-radius: 55px;
+                    @media (max-width: 800px) {
+                        margin-left: 0;
                     }
                 }
             }
-        }
 
-        .langs {
-            margin-left: 50px;
-            font-size: 20px;
+            &__link {
+                font-size: 20px;
+
+                &.active {
+                    position: relative;
+                    
+                    &:after {
+                        content: '';
+                        height: 2px;
+                        width: 70%;
+                        position: absolute;
+                        left: 50%;
+                        bottom: -2px;
+                        transform: translateX(-50%);
+                        background-color: #fff;
+                    }
+                }
+
+                &.btn {
+                    padding: 10px 20px;
+                    background-color: #3E86C9;
+                    color: #fff;
+                    font-size: 20px;
+                    border-radius: 55px;
+                }
+            }
+
+            &__toggle {
+                height: 30px;
+                width: 28px;
+                display: none;
+                cursor: pointer;
+
+                @media (max-width: 800px) {
+                    display: inline-block;
+                }
+
+                &.on {
+
+                    span {
+                        background-color: transparent;
+
+                        &::before {
+                            transform: rotate(45deg) translate(5px, 5px);
+                        }
+
+                        &::after {
+                            transform: rotate(-45deg) translate(7px, -8px);
+                        }
+                    }
+                }
+
+                span {
+                    position: relative;
+                    display: block;
+                    width: 100%;
+                    height: 5px;
+                    background-color: #ffffff;
+                    transition: all 0.3s;
+                    backface-visibility: hidden;
+                    border-radius: 2px;
+
+                    &::before,
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        top: -9px;
+                        width: 100%;
+                        height: 5px;
+                        background-color: #ffffff;
+                        transition: all 0.3s;
+                        backface-visibility: hidden;
+                        border-radius: 2px;
+                    }
+
+                    &::after {
+                        top: 9px;
+                    }
+                }
+            }
         }
     }
 }
@@ -98,7 +199,7 @@ body {
 
 .info {
 
-    &-title {
+    &__title {
 
     }
 
@@ -126,21 +227,21 @@ body {
 
 .benefits {
 
-    .title {
+    &__title {
 
     }
 
-    .descr {
+    &__descr {
 
     }
 
-    .link-more {
+    &__link-more {
 
     }
 
-    .list {
+    &__list {
 
-        .item {
+        .list__item {
             
         }
     }
