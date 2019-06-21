@@ -43,8 +43,19 @@
                     <li class="menu__item"><a class="menu__link" href="benefits.html">Подробнее</a></li>
                     <li class="menu__item"><a class="menu__link btn" href="buy.html">Купить</a></li>
                     <li class="menu__item"><a class="menu__link" href="faq.html">F.A.Q</a></li>
-                    <li class="menu__item"><a class="menu__link" href="login.html">Войти</a></li>
-                    <li class="menu__item menu__item--langs">EN</li>
+                    <li class="menu__item menu__item--auth">
+                        <select class="header__auth">
+                            <option value="login.html">Вход</option>
+                            <option value="auth.html">Регистрация</option>
+                        </select>
+                    </li>
+                    <li class="menu__item menu__item--langs">
+                        <select>
+                            <option value="EN">EN</option>
+                            <option value="UA">UA</option>
+                            <option value="RU">RU</option>
+                        </select>
+                    </li>
                 </ul>
                 <div class="menu__toggle js-toggleMenu"><span></span></div>
             </nav>
@@ -52,6 +63,66 @@
     </header>
     
     <div class="content">
+
+        <section class="buy">
+            <div class="container">
+                <h1 class="buy__title">Купить</h1>
+
+                <form class="buy__form">
+                    <div class="info__panel">
+                        <div class="amount">
+                            <span class="minus">-</span>
+                            <span class="number">1</span>
+                            <span class="plus">+</span>
+                        </div>
+
+                        <h3 class="total">Итог: $1999</h3>
+
+                        <div class="currency">
+                            <select>
+                                <option value="RUB">RUB</option>
+                                <option value="UAN">UAN</option>
+                                <option value="USD">USD</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form__group">
+                        <label for="fullname">Ваше ФИО:</label>
+                        <input id="fullname" type="text" class="form__input js-inputFilled" placeholder="Вольнов Евгений Данилович">
+                    </div>
+                    <div class="form__group">
+                        <label for="city">Город:</label>
+                        <input id="city" type="text" class="form__input js-inputFilled" placeholder="Москва">
+                    </div>
+                    <div class="form__group">
+                        <label for="address">Адресс:</label>
+                        <input id="address" type="text" class="form__input js-inputFilled" placeholder="Ул. Пушкина 25, кв. 85">
+                    </div>
+                    <div class="form__group">
+                        <label for="payment">Способ оплаты:</label>
+                        <select id="payment">
+                            <option value="BTC">Bitcoin</option>
+                            <option value="ALT">Altcoin</option>
+                            <option value="ETH">Ethereum</option>
+                            <option value="ADA">Cardano</option>
+                        </select>
+                    </div>
+                    <div class="form__group form__group--btn">
+                        <label>Наш BTC:</label>
+                        <div class="btc"><img src="./img/barcode.svg" alt=""><span>39SQE4a6kWzsoJnj4jivucfAoRhUf2LhQP</span></div>
+                    </div>
+                    <div class="form__group">
+                        <label for="serial_number">Порядковый номер:</label>
+                        <input id="serial_number" type="number" class="form__input js-inputFilled" placeholder="0001">
+                    </div>
+                    <div class="form__group">
+                        <div></div>
+                        <button class="form__submit" type="submit">Купить</button>
+                    </div>
+                </form>
+            </div>
+        </section>
 
     </div>
 

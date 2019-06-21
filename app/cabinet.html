@@ -38,13 +38,25 @@
         <div class="container header__wrap">
             <a href="" class="header__logo">Logotype</a>
             <nav class="header__nav">
-                <ul class="menu" id="menu">
-                    <li class="menu__item"><a class="menu__link active" href="index.html">Главная</a></li>
+                <ul class="menu menu--cabinet" id="menu">
+                    <li class="menu__item"><a class="menu__link" href="index.html">Главная</a></li>
                     <li class="menu__item"><a class="menu__link" href="benefits.html">Подробнее</a></li>
                     <li class="menu__item"><a class="menu__link btn" href="buy.html">Купить</a></li>
                     <li class="menu__item"><a class="menu__link" href="faq.html">F.A.Q</a></li>
-                    <li class="menu__item"><a class="menu__link" href="login.html">Войти</a></li>
-                    <li class="menu__item menu__item--langs">EN</li>
+                    <li class="menu__item"> <!-- use .menu__item--auth for select -->
+                        <a class="menu__link" href="index.html">Выход</a>
+                        <!--<select class="header__auth">-->
+                            <!--<option value=""><a class="menu__link" href="login.html">Вход</a></option>-->
+                            <!--<option value=""><a class="menu__link" href="#">Выйти</a></option>-->
+                        <!--</select>-->
+                    </li>
+                    <li class="menu__item menu__item--langs">
+                        <select>
+                            <option value="EN">EN</option>
+                            <option value="UA">UA</option>
+                            <option value="RU">RU</option>
+                        </select>
+                    </li>
                 </ul>
                 <div class="menu__toggle js-toggleMenu"><span></span></div>
             </nav>
@@ -52,6 +64,27 @@
     </header>
     
     <div class="content">
+
+        <section class="cabinet">
+            <div class="container">
+                <h1 class="cabinet__title">Информация</h1>
+                <div class="cabinet__info">
+                    <div class="info__item">
+                        <p class="item__name">Уникальный код:</p>
+                        <p class="item__value">39SQE4a6kWzsoJnj4jivucfAoRhUf2LhQP</p>
+                    </div>
+                    <div class="info__item">
+                        <p class="item__name">Реферальная ссылка:</p>
+                        <p class="item__value"><a href="#">t.me/shalashowich</a></p>
+                    </div>
+                    <div class="info__item">
+                        <p class="item__name">Балланс:</p>
+                        <p class="item__value">$5 843,17</p>
+                    </div>
+                </div>
+                <a class="withdrawal__btn" href="#">Запросить вывод</a>
+            </div>
+        </section>
 
     </div>
 

@@ -43,8 +43,19 @@
                     <li class="menu__item"><a class="menu__link active" href="benefits.html">Подробнее</a></li>
                     <li class="menu__item"><a class="menu__link btn" href="buy.html">Купить</a></li>
                     <li class="menu__item"><a class="menu__link" href="faq.html">F.A.Q</a></li>
-                    <li class="menu__item"><a class="menu__link" href="login.html">Войти</a></li>
-                    <li class="menu__item menu__item--langs">EN</li>
+                    <li class="menu__item menu__item--auth">
+                        <select class="header__auth">
+                            <option value="login.html">Вход</option>
+                            <option value="auth.html">Регистрация</option>
+                        </select>
+                    </li>
+                    <li class="menu__item menu__item--langs">
+                        <select>
+                            <option value="EN">EN</option>
+                            <option value="UA">UA</option>
+                            <option value="RU">RU</option>
+                        </select>
+                    </li>
                 </ul>
                 <div class="menu__toggle js-toggleMenu"><span></span></div>
             </nav>
@@ -57,7 +68,7 @@
             <div class="container benefits__wrap">
                 <h2 class="benefits__title">Преимущества нашего смартфона</h2>
                 <p class="benefits__descr">Тут будто мини описание того, что сможет делать это замечательный телефон. Купите его по скидке!</p>
-                <a href="#" class="benefits__link-more">Узнать подробнее <img src="./img/ic_arrow-right.svg" alt=""></a>
+                <a href="#" class="benefits__link-more js-detailPopup">Узнать подробнее <img src="./img/ic_arrow-right.svg" alt=""></a>
                 <ul class="benefits__list">
                     <li class="list__item">
                         <img src="./img/checkmark.svg" alt="" class="icon">
@@ -100,6 +111,26 @@
         </section>
 
     </div>
+
+    <!-- popup -->
+    <div class="popup__overlay"></div>
+    <div class="popup">
+        <div class="popup__content">
+            <div class="popup__title">Характеристики</div>
+
+            <ul class="popup__list">
+                <li class="popup__item">Дисплей Super Retina HD.</li>
+                <li class="popup__item">Полноэкранный дисплей OLED Multi‑﻿Touch с диагональю 5,8 дюйма</li>
+                <li class="popup__item">Дисплей HDR.</li>
+                <li class="popup__item">2436×1125 пикселей, 458 пикселей на дюйм</li>
+                <li class="popup__item">Контрастность 1 000 000:1 (стандартная)</li>
+                <li class="popup__item">Дисплей True Tone.</li>
+                <li class="popup__item">Дисплей с расширенным цветовым охватом (P3)</li>
+                <li class="popup__item">3D Touch.</li>
+            </ul>
+        </div>
+    </div>
+    <!-- popup end -->
 
     <footer class="footer">
         <div class="container footer__wrap">

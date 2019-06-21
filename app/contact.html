@@ -43,8 +43,19 @@
                     <li class="menu__item"><a class="menu__link" href="benefits.html">Подробнее</a></li>
                     <li class="menu__item"><a class="menu__link btn" href="buy.html">Купить</a></li>
                     <li class="menu__item"><a class="menu__link" href="faq.html">F.A.Q</a></li>
-                    <li class="menu__item"><a class="menu__link" href="login.html">Войти</a></li>
-                    <li class="menu__item menu__item--langs">EN</li>
+                    <li class="menu__item menu__item--auth">
+                        <select class="header__auth">
+                            <option value="login.html">Вход</option>
+                            <option value="auth.html">Регистрация</option>
+                        </select>
+                    </li>
+                    <li class="menu__item menu__item--langs">
+                        <select>
+                            <option value="EN">EN</option>
+                            <option value="UA">UA</option>
+                            <option value="RU">RU</option>
+                        </select>
+                    </li>
                 </ul>
                 <div class="menu__toggle js-toggleMenu"><span></span></div>
             </nav>
@@ -52,6 +63,31 @@
     </header>
     
     <div class="content">
+
+        <section class="contact">
+            <div class="container">
+                <h1 class="contact__title">Связаться с нами</h1>
+
+                <form class="contact__form">
+                    <div class="form__group">
+                        <label for="email">Email:</label>
+                        <input id="email" type="email" class="form__input js-inputFilled" placeholder="example@gmail.com">
+                    </div>
+                    <div class="form__group">
+                        <label for="name">Ваше имя:</label>
+                        <input id="name" type="text" class="form__input js-inputFilled" placeholder="Вольнов Евгений Данилович">
+                    </div>
+                    <div class="form__group form__group--message">
+                        <label for="message">Сообщение:</label>
+                        <textarea id="message" type="text" class="form__input js-inputFilled form__input--message" placeholder="Когда выйдет новая модель?"></textarea>
+                    </div>
+                    <div class="form__group">
+                        <div></div>
+                        <button class="form__submit" type="submit">Отправить</button>
+                    </div>
+                </form>
+            </div>
+        </section>
 
     </div>
 
