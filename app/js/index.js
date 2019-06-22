@@ -13,6 +13,17 @@ $(document).ready(function(){
     });
 
 
+    // sticky header
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 1){
+            $('.header').addClass("sticky");
+        }
+        else{
+            $('.header').removeClass("sticky");
+        }
+    });
+
+
     // popup benefits
     $('.js-detailPopup').click(function(){
         $('.popup, .popup__overlay').fadeIn(400); //показываем всплывающее окно
