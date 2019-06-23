@@ -19,7 +19,8 @@
 
 	<!-- ПОДКЛЮЧЕНИЕ JQUERY -->
 	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
-	<script src="js/jquery.3.3.1.min.js"></script>
+    <script src="js/jquery.3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
 
 	<!-- SCRIPTS -->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
@@ -62,65 +63,38 @@
         </div>
     </header>
     
-    <div class="content">
+    <div class="content content-details">
 
-        <section class="buy">
+        <section class="buy-details">
             <div class="container">
-                <h1 class="buy__title">Купить</h1>
-
-                <form class="buy__form">
-                    <div class="info__panel">
-                        <div class="amount">
-                            <span class="minus">-</span>
-                            <span class="number">1</span>
-                            <span class="plus">+</span>
-                        </div>
-
-                        <h3 class="total">Итог: $1999</h3>
-
-                        <div class="currency">
-                            <select>
-                                <option value="RUB">RUB</option>
-                                <option value="UAN">UAN</option>
-                                <option value="USD">USD</option>
-                            </select>
-                        </div>
+                <h1 class="title">Осуществите перевод со своего кошелька на адрес:</h1>
+                <div class="btc">
+                    <div class="btc__address" id="btc__address">1njrRcKQtfjjLuQxFYCeMXcth77m5TAYo</div>
+                    <div class="btc__copy">
+                        <img src="./img/copy.svg" alt="" class="img">
+                        <p class="text js-copy" data-clipboard-target="#btc__address">Copy</p>
                     </div>
-
-                    <div class="form__group">
-                        <label for="fullname">Ваше ФИО:</label>
-                        <input id="fullname" type="text" class="form__input js-inputFilled" placeholder="Вольнов Евгений Данилович">
+                </div>
+                <div class="total">
+                    <h3 class="total__number"><b>Сумма: </b><span class="total-number">0.0064</span> BTC</h3>
+                    <div class="total__copy btc__copy" data-clipboard-target="#total-number">
+                        <img src="./img/copy.svg" alt="" class="img">
+                        <p class="text js-copy">Copy</p>
                     </div>
-                    <div class="form__group">
-                        <label for="city">Город:</label>
-                        <input id="city" type="text" class="form__input js-inputFilled" placeholder="Москва">
-                    </div>
-                    <div class="form__group">
-                        <label for="address">Адресс:</label>
-                        <input id="address" type="text" class="form__input js-inputFilled" placeholder="Ул. Пушкина 25, кв. 85">
-                    </div>
-                    <div class="form__group">
-                        <label for="payment">Способ оплаты:</label>
-                        <select id="payment">
-                            <option value="BTC">Bitcoin</option>
-                            <option value="ALT">Altcoin</option>
-                            <option value="ETH">Ethereum</option>
-                            <option value="ADA">Cardano</option>
-                        </select>
-                    </div>
-                    <!-- <div class="form__group form__group--btn">
-                        <label>Наш BTC:</label>
-                        <div class="btc"><img src="./img/barcode.svg" alt=""><span>39SQE4a6kWzsoJnj4jivucfAoRhUf2LhQP</span></div>
-                    </div> -->
-                    <div class="form__group">
-                        <label for="serial_number">Порядковый номер:</label>
-                        <input id="serial_number" type="number" class="form__input js-inputFilled" placeholder="0001">
-                    </div>
-                    <div class="form__group">
-                        <div></div>
-                        <a href="buy-details.html" class="form__submit" type="submit">Купить</a>
-                    </div>
-                </form>
+                </div>
+                <div class="img__block">
+                    <a href="#">
+                        <img src="./img/barcode.svg" alt="">
+                    </a>
+                </div>
+                <div class="payment">
+                    <h3 class="payment__text">Оплатить через Bitcoin</h3>
+                    <button class="payment__cancel">Отмена</button>
+                </div>
+                <div class="progress">
+                    <div class="fill" style="width: 80%;"></div>
+                </div>
+                <div class="time">02:13:08</div>
             </div>
         </section>
 
@@ -136,9 +110,9 @@
             </div>
         </div>
     </footer>
-        
-    </div>
     
+</div>
+
 <script src="js/index.js"></script>
 </body>
 </html>

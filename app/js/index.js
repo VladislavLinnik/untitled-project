@@ -24,6 +24,18 @@ $(document).ready(function(){
     });
 
 
+
+    // copy buy details
+    new ClipboardJS('.js-copy');
+    // function copybtc(el) { 
+    //     var $tmp = $("<input>"); 
+    //     $("body").append($tmp); 
+    //     $tmp.val($(el).text()).select(); 
+    //     document.execCommand("copy"); 
+    //     $tmp.remove(); 
+    // }
+
+
     // popup benefits
     $('.js-detailPopup').click(function(){
         $('.popup, .popup__overlay').fadeIn(400); //показываем всплывающее окно
