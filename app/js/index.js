@@ -26,7 +26,6 @@ $(document).ready(function(){
 
 
     // copy buy details
-    new ClipboardJS('.js-copy');
     // function copybtc(el) { 
     //     var $tmp = $("<input>"); 
     //     $("body").append($tmp); 

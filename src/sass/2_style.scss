@@ -1288,7 +1288,7 @@ body {
 
 .buy-details {
     padding: 10vh 0;
-    color: #0d0d0d;
+    color: #ACACAC;
     text-align: center;
 
     .title {
@@ -1345,6 +1345,7 @@ body {
             }
 
             .text {
+                color: #0d0d0d;
                 font-size: 12px;
             }
         }
@@ -1441,13 +1442,6 @@ body {
     .time {
         
     }
-}
-
-
-
-.content-details {
-    background-color: #eee;
-    color: #0d0d0d;
 }
 
 

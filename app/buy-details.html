@@ -17,14 +17,8 @@
 	<!-- STYLES -->
 	<link rel="stylesheet" href="css/style.css">
 
-	<!-- ПОДКЛЮЧЕНИЕ JQUERY -->
-	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
-    <script src="js/jquery.3.3.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
-
 	<!-- SCRIPTS -->
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-	<!-- <script src="https://use.fontawesome.com/7457d043e6.js"></script> -->
+    <script src="js/jquery.3.3.1.min.js"></script>
 
 	<!-- FOR SUPPORT HTML5 IN IE -->
 	<!--[if IE]>
@@ -63,23 +57,23 @@
         </div>
     </header>
     
-    <div class="content content-details">
+    <div class="content">
 
         <section class="buy-details">
             <div class="container">
                 <h1 class="title">Осуществите перевод со своего кошелька на адрес:</h1>
                 <div class="btc">
                     <div class="btc__address" id="btc__address">1njrRcKQtfjjLuQxFYCeMXcth77m5TAYo</div>
-                    <div class="btc__copy">
+                    <div class="btc__copy js-copy" data-clipboard-target="#btc__address">
                         <img src="./img/copy.svg" alt="" class="img">
-                        <p class="text js-copy" data-clipboard-target="#btc__address">Copy</p>
+                        <p class="text">Copy</p>
                     </div>
                 </div>
                 <div class="total">
-                    <h3 class="total__number"><b>Сумма: </b><span class="total-number">0.0064</span> BTC</h3>
-                    <div class="total__copy btc__copy" data-clipboard-target="#total-number">
+                    <h3 class="total__number"><b>Сумма: </b><span id="total-number">0.0064</span> BTC</h3>
+                    <div class="total__copy btc__copy js-copy" data-clipboard-target="#total-number">
                         <img src="./img/copy.svg" alt="" class="img">
-                        <p class="text js-copy">Copy</p>
+                        <p class="text">Copy</p>
                     </div>
                 </div>
                 <div class="img__block">
@@ -113,6 +107,9 @@
     
 </div>
 
+<script>
+new ClipboardJS('.js-copy');
+</script>
 <script src="js/index.js"></script>
 </body>
 </html>
