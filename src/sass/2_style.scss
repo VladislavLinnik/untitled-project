@@ -1333,7 +1333,7 @@ body {
 
         &__copy {
             padding: 8px;
-            display: inline-flex;
+            display: block;
             background-color: #fff;
             border: 1px solid #ddd;
             border-radius: 4px;
@@ -1341,10 +1341,12 @@ body {
 
             .img {
                 margin-right: 5px;
+                display: inline-block;
                 width: 10px;
             }
 
             .text {
+                display: inline-block;
                 color: #0d0d0d;
                 font-size: 12px;
             }
